@@ -21,7 +21,7 @@ function take_snapshot()
     
 }
 show(ml5.version);
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/rF30Dar7o/model.json', modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/952Ujb881/model.json', modelLoaded);
 function modelLoaded()
 {
     show("Model Loaded!");
@@ -34,6 +34,12 @@ function speak()
     synthesis.speak(utter);
 
 }
+function what(message)
+{
+    var synth = window.speechSynthesis;
+    var utter2 = new SpeechSynthesisUtterance(message);
+    synth.speak(utter2);
+}
 function check()
 {
     show("Checking...");
@@ -45,6 +51,8 @@ function get_results(error, results)
     if(error)
     {
         show("Error, could not recognise the image!!");
+        what("I do not know you, you re a stranger to me!!");
+
     }else{
         show("Checked!!");
         show(results);
