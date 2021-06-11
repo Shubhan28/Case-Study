@@ -1,59 +1,119 @@
- 
 <html>
-  <head>
-    <title>Emotion To Emoji</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+<head>
+    <title>Case Study</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js">
+    </script>
 
-  <body>
-  <div class="container">
-    
+    <script
+        src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js">
+    </script>
+
+    <link rel="stylesheet" type="text/css"
+        href="style.css">
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.sound.min.js">
+    </script>
+</head>
+
+<body>
     <center>
-      <h3 class="btn btn-warning heading">Family recognisor app
-  
-    </h3>
-
-      <p style="font-size: 22px;">Take your selfie to generate emoji
-      	<br>
-        <b style="color: yellow">Is it your mom?</b>
-        <br>
-        <b style="color: black">Is it your dad?</b>
-        <br>
-        <b style="color: red">Is it your sibling?</b>
-        <br>
-      </p>
-      <div class="col-md-4 col-sm-12 col-xs-12">
-       <label>Webcam view-</label>
-       <div id="camera"></div>
-       <br><br>
-       <button onclick="take_snapshot()" class="btn btn-danger">Capture image</button>
-       
-      </div>
-  
-
-      <div class="col-md-4 col-sm-12 col-xs-12">
-	      <label>Snapshot - </label>
-        <div id="result"></div>
+        <h1 class="header">
+            Case Study <sup>
+                <img id="img" 
+                    src="http://www.avantisystems.com/wp-content/uploads/2015/06/2015-06-Resource-Icons_Case-Studies.png">
+            </sup>
+        </h1>
         <br><br>
-        <button onclick="check()" class="btn btn-success">Identify member</button>
+        <ol>
+            <div class="col-xs-12 text_and_image">
+                <li class="col-sm-4 col-xs-12">
+                    <b>Test image - </b>
+                    <img class="img-responsive"
+                        src="https://tse4.mm.bing.net/th?id=OIP.tCGSOgZCUVG6XGLC9IBHrwAAAA&pid=Api&P=0&w=300&h=300">
+                </li>
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b>
+                    <span>Water bottle</span>
+                </h5>
 
-      </div>
-
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET
+                        MODEL</b>
+                    <span>Shower Curtain</span>
+                </h5>
+                <div
+                    class="mini-result col-xs-12">
+                    <h4>Result - </h4>
+                    <hr>
+                    <h4>Google Lens is more
+                        accurate</h4>
+                </div>
+            </div>
+                <div class="col-xs-12 text_and_image">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image - </b>
+                        <img class="img-responsive"
+                            src="https://tse4.mm.bing.net/th?id=OIP.L-Uzd8nIU6Gipc0bbK_tHwHaGk&pid=Api&P=0&w=202&h=180">
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output on <b>GOOGLE LENS</b>
+                        <span>Laptop</span>
+                    </h5>
+    
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output on <b>MOBILENET
+                            MODEL</b>
+                        <span>Cellular telephone</span>
+                    </h5>
+                    <div
+                        class="mini-result col-xs-12">
+                        <h4>Result - </h4>
+                        <hr>
+                        <h4>Google Lens is more
+                            accurate</h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 text_and_image">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image - </b>
+                        <img class="img-responsive"
+                            src="https://tse3.mm.bing.net/th?id=OIP.C_8QOuJs-ABHsnpMiBRaIgHaHa&pid=Api&P=0&w=300&h=300">
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output on <b>GOOGLE LENS</b>
+                        <span>Television</span>
+                    </h5>
+    
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output on <b>MOBILENET
+                            MODEL</b>
+                        <span>Water Bootle</span>
+                    </h5>
+                    <div
+                        class="mini-result col-xs-12">
+                        <h4>Result - </h4>
+                        <hr>
+                        <h4>Google Lens is more
+                            accurate</h4>
+                    </div>
+                </div>
+        </ol>
     </center>
 
-  </div>
+</body>
 
-<script src="main.js"></script>
-
-  </body>
 </html>
-
- 
